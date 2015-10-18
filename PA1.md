@@ -60,8 +60,8 @@ median(aggregacti$steps)
 
 
 ```r
-aggreg_step_interv <- aggregate(steps ~ interval, data = activity, FUN = mean)
-plot(aggreg_step_interv, type="l", col = "darkblue")
+aggreg_steps_interval <- aggregate(steps ~ interval, data = activity, FUN = mean)
+plot(aggreg_steps_interval, type="l", col = "darkblue")
 ```
 
 ![](PA1_files/figure-html/unnamed-chunk-5-1.png) 
@@ -69,6 +69,13 @@ plot(aggreg_step_interv, type="l", col = "darkblue")
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
 
+```r
+aggreg_steps_interval$interval[which.max(aggreg_steps_interval$steps)]
+```
+
+```
+## [1] 835
+```
 
 ## Imputing missing values
 
