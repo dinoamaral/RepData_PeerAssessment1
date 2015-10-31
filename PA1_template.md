@@ -1,18 +1,9 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+# Reproducible Research: Peer Assessment 1
 
 
 ## Loading and preprocessing the data
-````{r}
-unzip("activity.zip")
-activity <- read.csv("activity.csv")
-str(activity)
-activity$date <- as.Date(activity$date)
-```
+
+
 
 ## What is mean total number of steps taken per day?
 
